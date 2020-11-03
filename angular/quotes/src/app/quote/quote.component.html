@@ -1,0 +1,62 @@
+<!-- <div>
+    <h1>My Quotes</h1>
+    <hr>
+    <ul>
+        <div *ngFor='let quote of quotes;let i = index'>
+          <li>{{quote.name}} <br>due on {{quote.completeDate|date|uppercase}}</li>
+          <button (click)='toggleDetails(i)'>View More</button>
+          <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+        </div>
+      </ul>
+  </div> -->
+  <style>
+      h1{
+          text-align: center;
+          text-transform: uppercase;
+      }
+      .rows{
+          display: flex;
+      }
+      #article{
+        padding: 20px;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 3%;
+  margin:20px;
+  background-color:#d9ac73;
+      }
+      button{
+        margin-bottom: 10px;
+background-color: cornflowerblue;
+padding: 5px 10px;
+border-radius: 10%;   
+      }
+  </style>
+
+    <h1>MY Quotes</h1>
+    <hr>
+    <app-quote-form></app-quote-form>
+    <!-- <div class="row">
+      <div class="col-md-8">
+        <div *ngFor='let goal of goals;let i = index'>
+          <div>
+            <h6>{{quote.name}} <br>due on {{quote.completeDate|date|uppercase}}</h6>
+            <button (click)='toggleDetails(i)'>View More</button>
+
+          </div>
+  
+          <div *ngIf='quote.showDescription'>
+            <app-quote-detail  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="rows">
+        <div *ngFor='let quote of quotes;let i = index' id="article">
+          <h4>{{quote.name}} <br></h4>
+          <button (click)='toggleDetails(i)'>View More</button>
+          <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+        </div>
+  </div>

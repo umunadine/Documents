@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+     i{
+  margin: 0 40px;
+}
+</style>
+<p class="rows">
+    {{quote.description}}
+  </p>
+  <p>Posted {{quote.completeDate|dateCount}} days ago </p>
+  <!-- <button (click)= 'quoteComplete(true)'>Complete</button> -->
+ <i  class="fa fa-thumbs-o-up"></i>
+ <i class="fa fa-thumbs-o-down"></i>
+  <i class="fa fa-trash-o"(click)= 'quoteDelete(true)'></i>
+ 
