@@ -9,7 +9,7 @@ A  user would be able to
 3.Delete a quote
 4.See the number of upvotes and number of downvotes for each quote.
 ###  link to the deployed site 
- 
+ https://umunadine.github.io/Quotes.io/
 ### Copyright and License information
 MIT
 
